@@ -1,18 +1,30 @@
 #include<iostream>
+#include<cstdlib>
 using namespace std;
 int main()
 {
-	int stars=1; //Звезди
-	int size=10; //големина на елхата
-
-	for( int total=size;total>0;--total) 
+	int stars=1; //Р—РІРµР·РґРё
+	int size; //РіРѕР»РµРјРёРЅР° РЅР° РµР»С…Р°С‚Р°
+	cout<<"Enter N:";
+	cin>>size;
+	if (size>40) //РџСЂРѕРІРµСЂРєР°
 	{
-		for(int i=(total-1);i>0;--i) //за мястото
+	   cout<<"Error!";
+	   cout<<"Max:40";
+	}
+	else
+	{
+	 for( int total=size;total>0;--total)
+    	{
+		for(int i=(total-1);i>0;--i) //Р·Р° РјСЏСЃС‚РѕС‚Рѕ
 			cout<<" ";
-		for(int j=0;j<stars;++j) //за звездите
+		for(int j=0;j<stars;++j) //Р·Р° Р·РІРµР·РґРёС‚Рµ
 			cout<<"* ";
 		stars+=1;
-		cout<<'\n';
+		cout<<endl;
+    	}
 	}
+	cout<<endl;
+	system ("PAUSE");
 	return 0;
 }
